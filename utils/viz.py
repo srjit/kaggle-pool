@@ -107,6 +107,7 @@ def scatter_plot(X_,
                  ylabel="",
                  format_y=True,
                  make_x_string=True,
+                 colors=None,
                  **kwargs):
 
     '''
@@ -135,7 +136,7 @@ def scatter_plot(X_,
     if make_x_string:
         X_ = [str(x) for x in X_]
 
-    return ax.scatter(X_,Y_, alpha=0.6, **kwargs)
+    return ax.scatter(X_,Y_, alpha=0.6, c=colors, **kwargs)
 
 
 def plot_histogram(X_,
